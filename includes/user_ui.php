@@ -37,6 +37,9 @@ class ExecPhp_UserUi
 	{
 		global $profileuser;
 		global $wp_version;
+		if(!isset($GLOBALS['profileuser'])){
+			$profileuser = $GLOBALS['profile_user'];
+		}
 
 		if ($profileuser->has_cap(ExecPhp_CAPABILITY_EXECUTE_ARTICLES))
 		{
